@@ -37,16 +37,17 @@
 
 	<?php 
 		echo form_open('autentica');
+		echo validation_errors();
 		//$attributes = array('class' => 'login-form');
 	?>
 
     <form action="../../index2.html" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="E-mail ou Usuário">
+        <input id="email" name="email" type="email" class="form-control" placeholder="E-mail ou Usuário">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Senha">
+        <input id="password" name="password" type="password" class="form-control" placeholder="Senha">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -64,6 +65,11 @@
         <!-- /.col -->
       </div>
     </form>
+    
+    <?php 
+    	echo form_close(); 
+    	
+    ?>
 
     <a href="#">Lembrar Minha Senha</a><br>
 

@@ -22,12 +22,13 @@ class Home extends CI_Controller {
 	
 	//Função para direcionar para tela de login.php
 	public function index(){
-		$this->load->helper(array('form'));
-		$this->load->view('view_login');
+// 		$this->load->helper(array('form'));
+// 		$this->load->view('view_login');
+
+		redirect('login');
 	}
 	
-	public function loginponto(){
-		$this->load->helper(array('form'));
-		$this->load->view('view_login');
+	public function dashboard(){
+		
 	}
 }
